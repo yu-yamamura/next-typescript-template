@@ -16,6 +16,7 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:import/typescript',
     'next/core-web-vitals',
+    'prettier'
   ],
   rules: {
     '@typescript-eslint/no-unused-vars': 'off',
