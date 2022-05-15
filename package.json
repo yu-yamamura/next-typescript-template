@@ -17,7 +17,8 @@
     "lint": "npm run -s lint:style; npm run -s lint:es",
     "lint:fix": "npm run -s lint:style:fix && npm run -s lint:es:fix",
     "fix": "npm run -s format:fix && npm run -s lint:fix",
-    "preinstall": "typesync || :"
+    "preinstall": "typesync || :",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "12.1.6",
