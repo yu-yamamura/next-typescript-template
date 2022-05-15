@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "type": "bash -c tsc --noEmit",
     "test": "jest --watch",
     "test:ci": "jest --ci --silent",
     "format": "prettier --check --loglevel=warn 'src/**/*.{js,jsx,ts,tsx,json}'",
@@ -21,6 +22,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "lint-staged": "^12.4.1",
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0"
