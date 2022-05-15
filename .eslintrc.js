@@ -4,11 +4,7 @@ module.exports = {
   parserOptions: {
     project: 'tsconfig.json',
   },
-  plugins: [
-    '@typescript-eslint',
-    'import',
-    'unused-imports',
-  ],
+  plugins: ['@typescript-eslint', 'import', 'unused-imports'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
@@ -16,7 +12,7 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:import/typescript',
     'next/core-web-vitals',
-    'prettier'
+    'prettier',
   ],
   rules: {
     '@typescript-eslint/no-unused-vars': 'off',
@@ -57,7 +53,7 @@ module.exports = {
           {
             pattern: '@/types/**',
             group: 'type',
-            position: 'before'
+            position: 'before',
           },
           {
             pattern: '@/styles/**',
