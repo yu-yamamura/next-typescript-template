@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test": "jest --watch",
+    "test:ci": "jest --ci --silent",
     "format": "prettier --check --loglevel=warn 'src/**/*.{js,jsx,ts,tsx,json}'",
     "format:fix": "prettier --write --loglevel=warn 'src/**/*.{js,jsx,ts,tsx,json}'",
     "lint:es": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
