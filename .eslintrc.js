@@ -4,7 +4,13 @@ module.exports = {
   parserOptions: {
     project: 'tsconfig.json',
   },
-  plugins: ['@typescript-eslint', 'import', 'unused-imports'],
+  plugins: [
+    '@typescript-eslint',
+    'import',
+    'unused-imports',
+    'jest',
+    'testing-library',
+  ],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
@@ -12,6 +18,9 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:import/typescript',
     'next/core-web-vitals',
+    'plugin:jest/recommended',
+    'plugin:jest/style',
+    'plugin:testing-library/react',
     'prettier',
   ],
   rules: {
@@ -63,5 +72,6 @@ module.exports = {
         ],
       },
     ],
+    'jest/consistent-test-it': ['warn', { fn: 'test' }],
   },
 };
