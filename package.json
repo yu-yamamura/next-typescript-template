@@ -6,7 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "format": "prettier --check --loglevel=warn 'src/**/*.{js,jsx,ts,tsx,json}'",
+    "format:fix": "prettier --write --loglevel=warn 'src/**/*.{js,jsx,ts,tsx,json}'",
+    "lint:es": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint:es:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint:style": "stylelint 'src/**/*.css'",
+    "lint:style:fix": "stylelint --fix 'src/**/*.css'",
+    "lint": "npm run -s lint:style; npm run -s lint:es",
+    "lint:fix": "npm run -s lint:style:fix && npm run -s lint:es:fix",
+    "fix": "npm run -s format:fix && npm run -s lint:fix",
     "preinstall": "typesync || :"
   },
   "dependencies": {
